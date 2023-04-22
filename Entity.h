@@ -9,6 +9,8 @@ class Entity {
 
         bool active;
 
+        float angle;
+
     public:
         Entity();
         Entity(Vector2f pos);
@@ -21,6 +23,10 @@ class Entity {
 		bool isActive();
 
 		void Translate(Vector2f vec);
+		void Rotate(float amount);
+
+		float getAngle();
+		void setAngle(float r);
 
 		virtual void Update();
 		virtual void Render();

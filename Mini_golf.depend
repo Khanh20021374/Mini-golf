@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1678261379 source:e:\ap\golf\assetmanager.cpp
+1680421653 source:e:\ap\golf\assetmanager.cpp
 	"AssetManager.h"
 
-1677474242 e:\ap\golf\assetmanager.h
+1680421653 e:\ap\golf\assetmanager.h
 	<SDL_mixer.h>
 	"Graphics.h"
 	<map>
@@ -121,7 +121,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1677666597 e:\ap\golf\graphics.h
+1681287018 e:\ap\golf\graphics.h
 	<string>
 	<stdio.h>
 	<SDL.h>
@@ -423,72 +423,247 @@
 	"begin_code.h"
 	"close_code.h"
 
-1677475344 source:e:\ap\golf\audiomanager.cpp
+1680421653 source:e:\ap\golf\audiomanager.cpp
 	"AudioManager.h"
 
-1677474513 e:\ap\golf\audiomanager.h
+1680421653 e:\ap\golf\audiomanager.h
 	<stdio.h>
 	"AssetManager.h"
 
-1677416564 source:e:\ap\golf\entity.cpp
+1680421653 source:e:\ap\golf\entity.cpp
 	"Entity.h"
 
-1677423215 e:\ap\golf\entity.h
+1680421653 e:\ap\golf\entity.h
 	"Math.h"
 
-1677485569 e:\ap\golf\math.h
+1681313411 e:\ap\golf\math.h
 	<iostream>
 
-1678261127 source:e:\ap\golf\gamemanager.cpp
+1681355824 source:e:\ap\golf\gamemanager.cpp
 	"GameManager.h"
 
-1678261115 e:\ap\golf\gamemanager.h
+1681355770 e:\ap\golf\gamemanager.h
 	"Texture.h"
 	"InputManager.h"
 	"Timer.h"
 	"AudioManager.h"
 	"ScreenManager.h"
 
-1677473865 e:\ap\golf\texture.h
+1680421653 e:\ap\golf\texture.h
 	"Entity.h"
 	"AssetManager.h"
 	<string>
 
-1677513379 e:\ap\golf\inputmanager.h
+1680421653 e:\ap\golf\inputmanager.h
 	<stdio.h>
 	<SDL.h>
 	<string.h>
 	"Math.h"
 
-1677419286 e:\ap\golf\timer.h
+1680421653 e:\ap\golf\timer.h
 	<SDL.h>
 
-1678259364 e:\ap\golf\screenmanager.h
+1681354915 e:\ap\golf\screenmanager.h
 	"StartScreen.h"
+	"PlayScreen.h"
+	"EndScreen.h"
 	"InputManager.h"
 
-1678899789 e:\ap\golf\startscreen.h
+1680421653 e:\ap\golf\startscreen.h
 	"Texture.h"
 	"InputManager.h"
 
-1678260783 source:e:\ap\golf\graphics.cpp
+1680421653 source:e:\ap\golf\graphics.cpp
 	"Graphics.h"
 
-1677513278 source:e:\ap\golf\inputmanager.cpp
+1680421653 source:e:\ap\golf\inputmanager.cpp
 	"InputManager.h"
 
-1677383701 source:e:\ap\golf\main.cpp
+1680421653 source:e:\ap\golf\main.cpp
 	"GameManager.h"
 
-1678900085 source:e:\ap\golf\screenmanager.cpp
+1681356142 source:e:\ap\golf\screenmanager.cpp
 	"ScreenManager.h"
 
-1678900022 source:e:\ap\golf\startscreen.cpp
+1681324862 source:e:\ap\golf\startscreen.cpp
 	"StartScreen.h"
 
-1677473868 source:e:\ap\golf\texture.cpp
+1680421653 source:e:\ap\golf\texture.cpp
 	"Texture.h"
 
-1677418044 source:e:\ap\golf\timer.cpp
+1680421653 source:e:\ap\golf\timer.cpp
 	"Timer.h"
+
+1681352930 source:e:\ap\golf\hole.cpp
+	"Hole.h"
+
+1681323503 e:\ap\golf\hole.h
+	"Entity.h"
+	"Texture.h"
+
+1681321832 source:e:\ap\golf\playscreen.cpp
+	"PlayScreen.h"
+
+1681321731 e:\ap\golf\playscreen.h
+	"Ball.h"
+	"Hole.h"
+	"LevelManager.h"
+
+1681323682 e:\ap\golf\ball.h
+	"Texture.h"
+	"InputManager.h"
+	"AudioManager.h"
+	"Timer.h"
+
+1681353051 source:e:\ap\golf\ball.cpp
+	"Ball.h"
+
+1681467435 e:\ap\golf\levelmanager.h
+	"InputManager.h"
+	"Timer.h"
+	"Ball.h"
+	"Hole.h"
+	<cstdlib>
+	<ctime>
+
+1681467494 source:e:\ap\golf\levelmanager.cpp
+	"LevelManager.h"
+
+1681355378 source:e:\ap\golf\endscreen.cpp
+	"EndScreen.h"
+
+1681354661 e:\ap\golf\endscreen.h
+	"Entity.h"
+	"Texture.h"
+	"InputManager.h"
+
+1680421653 source:e:\advanced programming\golf\assetmanager.cpp
+	"AssetManager.h"
+
+1680421653 e:\advanced programming\golf\assetmanager.h
+	<SDL_mixer.h>
+	"Graphics.h"
+	<map>
+
+1681287018 e:\advanced programming\golf\graphics.h
+	<string>
+	<stdio.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+
+1680421653 source:e:\advanced programming\golf\audiomanager.cpp
+	"AudioManager.h"
+
+1680421653 e:\advanced programming\golf\audiomanager.h
+	<stdio.h>
+	"AssetManager.h"
+
+1681355378 source:e:\advanced programming\golf\endscreen.cpp
+	"EndScreen.h"
+
+1681354661 e:\advanced programming\golf\endscreen.h
+	"Entity.h"
+	"Texture.h"
+	"InputManager.h"
+
+1681874406 e:\advanced programming\golf\entity.h
+	"Math.h"
+
+1681870901 e:\advanced programming\golf\math.h
+	<iostream>
+	<SDL.h>
+
+1680421653 e:\advanced programming\golf\texture.h
+	"Entity.h"
+	"AssetManager.h"
+	<string>
+
+1680421653 e:\advanced programming\golf\inputmanager.h
+	<stdio.h>
+	<SDL.h>
+	<string.h>
+	"Math.h"
+
+1681874392 source:e:\advanced programming\golf\entity.cpp
+	"Entity.h"
+
+1681875871 source:e:\advanced programming\golf\gamemanager.cpp
+	"GameManager.h"
+
+1681355770 e:\advanced programming\golf\gamemanager.h
+	"Texture.h"
+	"InputManager.h"
+	"Timer.h"
+	"AudioManager.h"
+	"ScreenManager.h"
+
+1680421653 e:\advanced programming\golf\timer.h
+	<SDL.h>
+
+1681875827 e:\advanced programming\golf\screenmanager.h
+	"StartScreen.h"
+	"PlayScreen.h"
+	"EndScreen.h"
+	"InputManager.h"
+
+1680421653 e:\advanced programming\golf\startscreen.h
+	"Texture.h"
+	"InputManager.h"
+
+1681321731 e:\advanced programming\golf\playscreen.h
+	"Ball.h"
+	"Hole.h"
+	"LevelManager.h"
+
+1681873834 e:\advanced programming\golf\ball.h
+	"Texture.h"
+	"InputManager.h"
+	"AudioManager.h"
+	"Timer.h"
+
+1681323503 e:\advanced programming\golf\hole.h
+	"Entity.h"
+	"Texture.h"
+
+1681467435 e:\advanced programming\golf\levelmanager.h
+	"InputManager.h"
+	"Timer.h"
+	"Ball.h"
+	"Hole.h"
+	<cstdlib>
+	<ctime>
+
+1680421653 source:e:\advanced programming\golf\graphics.cpp
+	"Graphics.h"
+
+1681352930 source:e:\advanced programming\golf\hole.cpp
+	"Hole.h"
+
+1680421653 source:e:\advanced programming\golf\inputmanager.cpp
+	"InputManager.h"
+
+1681467494 source:e:\advanced programming\golf\levelmanager.cpp
+	"LevelManager.h"
+
+1680421653 source:e:\advanced programming\golf\main.cpp
+	"GameManager.h"
+
+1681321832 source:e:\advanced programming\golf\playscreen.cpp
+	"PlayScreen.h"
+
+1681875850 source:e:\advanced programming\golf\screenmanager.cpp
+	"ScreenManager.h"
+
+1681324862 source:e:\advanced programming\golf\startscreen.cpp
+	"StartScreen.h"
+
+1681871424 source:e:\advanced programming\golf\texture.cpp
+	"Texture.h"
+
+1680421653 source:e:\advanced programming\golf\timer.cpp
+	"Timer.h"
+
+1681874949 source:e:\advanced programming\golf\ball.cpp
+	"Ball.h"
 

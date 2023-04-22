@@ -11,9 +11,9 @@
 class Graphics {
 
     public:
-        static const int SCREEN_WIDTH = 850;
+        static const int SCREEN_WIDTH = 480;
         static const int SCREEN_HEIGHT = 640;
-        const char* WINDOW_TITLE = "SimpleSDL";
+        const char* WINDOW_TITLE = "Mini-golf";
 
         static Graphics* getInstance();
 

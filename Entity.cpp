@@ -2,6 +2,7 @@
 
 Entity::Entity() {
     position = Vector2f(0.0, 0.0);
+    angle = 0.0f;
     active = true;
 }
 
@@ -32,6 +33,18 @@ Vector2f Entity::getPosition() {
 
 void Entity::Translate(Vector2f vec) {
     position += vec;
+}
+
+void Entity::Rotate(float amount) {
+    angle += amount;
+}
+
+float Entity::getAngle() {
+    return angle;
+}
+
+void Entity::setAngle(float r) {
+    angle = r;
 }
 
 void Entity::Update() {}

@@ -52,5 +52,5 @@ void Texture::Render() {
     renderRect.x = (int)(getPosition().x - width*0.5f);
     renderRect.y = (int)(getPosition().y - height*0.5f);
 
-    graphics->drawTexture(texture, (clipped)? &clipRect : NULL, &renderRect);
+    graphics->drawTexture(texture, (clipped)? &clipRect : NULL, &renderRect, getAngle());
 }
