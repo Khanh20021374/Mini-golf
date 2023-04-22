@@ -15,6 +15,12 @@ void ScreenManager::Free() {
 
 ScreenManager::ScreenManager() {
     startScreen = new StartScreen();
+    playScreen = new PlayScreen();
+    endScreen = new EndScreen();
+
+    gameOver = false;
+
+    playScreen->StartNewGame();
 
     inputManager = InputManager::getInstance();
 
@@ -23,6 +29,12 @@ ScreenManager::ScreenManager() {
 
 ScreenManager::~ScreenManager() {
     delete startScreen;
+    delete playScreen;
+    delete endScreen;
+}
+
+bool ScreenManager::isOver() {
+    return gameOver;
 }
 
 void ScreenManager::Update() {
@@ -32,14 +44,28 @@ void ScreenManager::Update() {
             startScreen->Update();
             if (inputManager->mouseButtonPressed(InputManager::left)) {
                 currentScreen = play;
+                playScreen->StartNewGame();
             }
             break;
 
         case play:
-            if (inputManager->keyPressed(SDL_SCANCODE_ESCAPE)) {
-                currentScreen = start;
+            if (inputManager->keyPressed(SDL_SCANCODE_N)) {
+                currentScreen = over;
+            }
+            playScreen->Update();
+            break;
+
+        case over:
+            endScreen->Update();
+            if (inputManager->keyPressed(SDL_SCANCODE_R)) {
+                playScreen = new PlayScreen();
+                playScreen->StartNewGame();
+                currentScreen = play;
+            } else if (inputManager->keyPressed(SDL_SCANCODE_Q)) {
+                gameOver = true;
             }
             break;
+
     }
 }
 
@@ -52,7 +78,11 @@ void ScreenManager::Render() {
             break;
 
         case play:
+            playScreen->Render();
+            break;
 
+        case over:
+            endScreen->Render();
             break;
     }
 

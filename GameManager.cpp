@@ -41,6 +41,10 @@ GameManager::~GameManager() {
 void GameManager::Update() {
     inputManager->Update();
     screenManager->Update();
+
+    if (screenManager->isOver()) {
+        quit = true;
+    }
 }
 
 void GameManager::lateUpdate() {
@@ -63,6 +67,7 @@ void GameManager::Run() {
             if (event.type == SDL_QUIT) {
                 quit = true;
             }
+
         }
 
         if (timer->getDeltaTime() >= (1.0f / FRAME_RATE)) {
