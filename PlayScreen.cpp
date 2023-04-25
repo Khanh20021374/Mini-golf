@@ -7,6 +7,7 @@ PlayScreen::PlayScreen() {
     levelManager = NULL;
 
     levelStarted = false;
+    gameOver = false;
 
     background = new Texture("Assets/playBg.png");
     background->setPosition(Vector2f(Graphics::getInstance()->SCREEN_WIDTH * 0.5f, Graphics::getInstance()->SCREEN_HEIGHT * 0.5f));
@@ -34,12 +35,23 @@ void PlayScreen::StartNextLevel() {
     levelManager = new LevelManager(currentLevel);
 }
 
+bool PlayScreen::isOver() {
+    return gameOver;
+}
+
+int PlayScreen::getCurrentLevel() {
+    return currentLevel;
+}
+
 void PlayScreen::Update() {
     if (gameStarted) {
         if (!levelStarted) {
             StartNextLevel();
         } else {
             levelManager->Update();
+            if (levelManager->isOver()) {
+                gameOver = true;
+            }
         }
     }
 }
