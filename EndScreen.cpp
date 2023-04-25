@@ -19,11 +19,10 @@ EndScreen::EndScreen() {
 EndScreen::~EndScreen() {
     delete bg;
     delete gameOverMessage;
-    //delete gameOverShading;
+
     delete restartPrompt;
-    //delete restartPromptShading;
+
     delete quitPrompt;
-    //delete quitPromptShading;
 }
 
 void EndScreen::Update() {

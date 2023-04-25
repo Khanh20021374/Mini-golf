@@ -17,6 +17,7 @@ class PlayScreen : public Entity {
 
         bool gameStarted;
         bool levelStarted;
+        bool gameOver;
 
         int currentLevel;
 
@@ -30,6 +31,9 @@ class PlayScreen : public Entity {
         ~PlayScreen();
 
         void StartNewGame();
+        bool isOver();
+
+        int getCurrentLevel();
 
         void Update();
         void Render();

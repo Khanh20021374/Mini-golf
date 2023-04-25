@@ -16,11 +16,6 @@ class EndScreen : public Entity {
         Texture* restartPrompt;
         Texture* quitPrompt;
 
-        Texture* gameOverShading;
-        Texture* restartPromptShading;
-        Texture* quitPromptShading;
-
-
     public:
         EndScreen();
         ~EndScreen();

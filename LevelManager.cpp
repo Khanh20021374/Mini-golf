@@ -9,8 +9,12 @@ LevelManager::LevelManager(int level) {
 
     currentLevel = level;
     levelStarted = false;
+    gameOver = false;
 
     current = 0.0f;
+    elapsedTime = 0.0f;
+
+    countDown = 60;
 
     levelText = new Texture("Level", "assets/toonAround.ttf", 32, {255, 255, 255});
     levelText->setPosition(Vector2f(Graphics::getInstance()->SCREEN_WIDTH * 0.45f, Graphics::getInstance()->SCREEN_HEIGHT * 0.5f));
@@ -19,6 +23,9 @@ LevelManager::LevelManager(int level) {
 
     levelNumber = new Texture(std::to_string(currentLevel), "assets/toonAround.ttf", 32, {255, 255, 255});
     levelNumber->setPosition(Vector2f(Graphics::getInstance()->SCREEN_WIDTH * 0.55f, Graphics::getInstance()->SCREEN_HEIGHT * 0.5f));
+
+    clock = new Texture("Time left: " + std::to_string(countDown), "assets/toonAround.ttf", 32, {255, 255, 255});
+    clock->setPosition(Vector2f(Graphics::getInstance()->SCREEN_WIDTH * 0.50f, Graphics::getInstance()->SCREEN_HEIGHT * 0.05f));
 }
 
 LevelManager::~LevelManager() {
@@ -83,6 +90,20 @@ void LevelManager::Update() {
 
             StartNextLevel();
         }
+
+        elapsedTime += timer->getDeltaTime();
+        if (elapsedTime >= 1) {
+            countDown--;
+            elapsedTime = 0.0f;
+            clock = new Texture("Time left: " + std::to_string(countDown), "assets/toonAround.ttf", 32, {255, 255, 255});
+            clock->setPosition(Vector2f(Graphics::getInstance()->SCREEN_WIDTH * 0.50f, Graphics::getInstance()->SCREEN_HEIGHT * 0.05f));
+        }
+        if (countDown <= 0) {
+            gameOver = true;
+        }
+
+
+        std::cout << countDown << '\n';
     }
 }
 
@@ -95,6 +116,7 @@ void LevelManager::Render() {
     } else {
         ball->Render();
         hole->Render();
+        clock->Render();
     }
 }
 
@@ -110,4 +132,8 @@ bool LevelManager::checkCollision(Ball* ball, Hole* hole) {
     } else {
         return false;
     }
+}
+
+bool LevelManager::isOver() {
+    return gameOver;
 }

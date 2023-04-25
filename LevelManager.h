@@ -16,11 +16,16 @@ class LevelManager : public Entity {
         int currentLevel;
 
         bool levelStarted;
+        bool gameOver;
 
         float current;
+        float elapsedTime;
+
+        int countDown;
 
         Texture* levelText;
         Texture* levelNumber;
+        Texture* clock;
 
         float levelTextOnScreen;
         float levelTextOffScreen;
@@ -36,6 +41,8 @@ class LevelManager : public Entity {
     public:
         LevelManager(int level);
         ~LevelManager();
+
+        bool isOver();
 
         void Update();
         void Render();

@@ -49,7 +49,7 @@ void ScreenManager::Update() {
             break;
 
         case play:
-            if (inputManager->keyPressed(SDL_SCANCODE_N)) {
+            if (playScreen->isOver()) {
                 currentScreen = over;
             }
             playScreen->Update();
@@ -65,7 +65,6 @@ void ScreenManager::Update() {
                 gameOver = true;
             }
             break;
-
     }
 }
 
